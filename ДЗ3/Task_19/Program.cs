@@ -4,7 +4,7 @@ Console.WriteLine("Введите пятизначное число");
 int rem = 0;
 int namber1 = 0;
 int namber2 = 0;
-int con = 0;
+
 bool isPars = int.TryParse(Console.ReadLine(), out int namber);
 if (isPars == false) // проверка на ввод чисел
 {
