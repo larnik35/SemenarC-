@@ -8,10 +8,10 @@ Console.WriteLine("Введите 3-е число");
 int c = Convert.ToInt32(Console.ReadLine());
 int max = 0;
 
-if (max > a ) max = max ;
+if (max > a ) return;
    else max = a;
-if (max > b) max = max ;
+if (max > b) return;
  else  max = b;
- if (max > c) max = max ;
+ if (max > c) return;
  else  max = c;
 Console.WriteLine("Максимальное число - " + (max));
