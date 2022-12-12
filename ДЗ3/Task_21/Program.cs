@@ -23,7 +23,7 @@ PrintLengthSegment(ax, ay, az, bx, by, bz); // Вызов метода
 void PrintLengthSegment(int ax, int ay, int az, int bx, int by, int bz)
 {
     double ab = Math.Pow((bx - ax), 2) + Math.Pow((by - ay), 2) + Math.Pow((bz - az), 2) ; 
-    double AB = Math.Sqrt((double) ab);
+    double AB = Math.Sqrt(ab);
     Console.WriteLine("Длинна отрезка по трем координатам = " + Math.Round((Decimal)AB, 2));
     
 }
