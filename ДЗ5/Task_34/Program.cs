@@ -23,12 +23,11 @@ for (int i = 0; i < array.Length; i++)
 Console.WriteLine(" Колличество четных чисел = " + sum);
 }
 
-
 void FillArrey (int[] array){
 Random rnd = new Random();
 for (int i = 0; i < array.Length; i++)
 {
-    array[i] = rnd.Next(1,1000);
+    array[i] = rnd.Next(100,1000);
 }
 }
 
@@ -40,6 +39,6 @@ void PrintArray(int[] array)
     {
         Console.Write($"{array[i]},");
     }
-    Console.Write(array[array.Length-1]);
+   Console.Write(array[array.Length-1]);
     Console.Write("]");
 }
