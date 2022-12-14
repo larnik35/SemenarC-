@@ -17,19 +17,15 @@ for (int i = 1; i < array.Length; i++)
    if (array[i] > max)
    {
     max = array[i];
-   }       
-}
-Console.WriteLine($" Максимальное число {max}");
-for (int i = 1; i < array.Length; i++)
-{
-   if (array[i] < min)
+   }  
+    if (array[i] < min)
    {
     min = array[i];
-   }       
+   }     
 }
+Console.WriteLine($" Максимальное число {max}");
 Console.WriteLine($" Минимальное число {min}");
 dif = max - min;
-
 Console.WriteLine($" Разница между max и min  = {dif}");
 }
 
