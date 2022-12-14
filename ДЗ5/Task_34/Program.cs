@@ -7,6 +7,9 @@ int a = int.Parse(Console.ReadLine());
 int[] array = new int [a];
 FillArrey (array);
 PrintArray(array);
+CalculationEven(array);
+
+void CalculationEven(int[] array){
 int sum = 0;
 int b = 0;
 for (int i = 0; i < array.Length; i++)
@@ -18,7 +21,7 @@ for (int i = 0; i < array.Length; i++)
     }
 }
 Console.WriteLine(" Колличество четных чисел = " + sum);
-
+}
 
 
 void FillArrey (int[] array){
@@ -28,6 +31,8 @@ for (int i = 0; i < array.Length; i++)
     array[i] = rnd.Next(1,1000);
 }
 }
+
+
 void PrintArray(int[] array)
 {
     Console.Write("[");
