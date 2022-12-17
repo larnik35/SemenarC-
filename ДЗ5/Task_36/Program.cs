@@ -5,36 +5,38 @@
 Console.Clear();
 Console.Write(" Введите длинну массива  ");
 int a = int.Parse(Console.ReadLine());
-int[] array = new int [a];
-FillArrey (array);
+int[] array = new int[a];
+FillArrey(array);
 PrintArray(array);
 CalculationSum(array);
 
-void CalculationSum(int[] array){
-int sum = 0;
-for (int i = 1; i < array.Length; i = i + 2)
+void CalculationSum(int[] array)
 {
-     sum = sum + array[i];     
-}
-Console.WriteLine(" Сумма нечетных = " + sum);
+    int sum = 0;
+    for (int i = 1; i < array.Length; i = i + 2)
+    {
+        sum = sum + array[i];
+    }
+    Console.WriteLine(" Сумма нечетных = " + sum);
 }
 
-void FillArrey (int[] array){
-Random rnd = new Random();
-for (int i = 0; i < array.Length; i++)
+void FillArrey(int[] array)
 {
-    array[i] = rnd.Next(1,10);
-}
+    Random rnd = new Random();
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = rnd.Next(1, 10);
+    }
 }
 
 
 void PrintArray(int[] array)
 {
     Console.Write("[");
-    for (var i = 0; i < array.Length-1; i++)
+    for (var i = 0; i < array.Length - 1; i++)
     {
         Console.Write($"{array[i]},");
     }
-   Console.Write(array[array.Length-1]);
+    Console.Write(array[array.Length - 1]);
     Console.Write("]");
 }

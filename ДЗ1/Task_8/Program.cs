@@ -6,10 +6,12 @@ int D = N;
 int d = 0;
 Console.WriteLine("Начинаю магию");
 for (int i = 0; i < N; i = i + 1)
-{  d = D;
-   d = d%2;
-   if (d == 0)
-   { Console.WriteLine(D);
-   }
-D = D-1;   
+{
+    d = D;
+    d = d % 2;
+    if (d == 0)
+    {
+        Console.WriteLine(D);
+    }
+    D = D - 1;
 }
