@@ -13,7 +13,7 @@ Console.Write("Введите значение k2   ");
 double k2 = int.Parse(Console.ReadLine());
 double x = (b1-b2)*(-1)/(k1-k2);
 double y = k2*(b1-b2)*(-1)/(k1-k2)+b2;
-Console.WriteLine($"\nТочкой пересечения двух прямых имеет координаты ({x}; {y})");
+Console.WriteLine($"\nТочка пересечения двух прямых имеет координаты ({x}; {y})");
 
 
 
