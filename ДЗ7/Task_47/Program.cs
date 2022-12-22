@@ -5,13 +5,18 @@
 // 8 7,8 -7,1 9
 
 Console.Clear();
-Console.WriteLine("ВВедите колличество столбцов массива m ");
-int m = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите колличество строк в массиве n ");
-int n = int.Parse(Console.ReadLine());
-double[,] array = new double[m, n];
-FillingPrintArray(array);
-
+try
+{
+    int m = ReadNamber("ВВедите колличество столбцов массива \"m\" ");
+    int n = ReadNamber("\nВведите колличество строк в массиве \"n\" ");
+    double[,] array = new double[m, n];
+    Console.WriteLine();
+    FillingPrintArray(array);
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
 
 void FillingPrintArray(double[,] array) // задаем и распечатываем массив с случайными числами
 {
@@ -25,5 +30,17 @@ void FillingPrintArray(double[,] array) // задаем и распечатыв�
         }
         Console.WriteLine();
     }
+}
 
+int ReadNamber(string input)
+{
+    Console.WriteLine(input);
+
+    bool isParsed = int.TryParse(Console.ReadLine(), out int number);
+
+    if (isParsed == true)
+    {
+        return number;
+    }
+    throw new Exception("Нужно вводить цифры");
 }
