@@ -3,18 +3,21 @@
 // 1, -7, 567, 89, 223-> 3
 
 Console.Clear();
-Console.WriteLine("Введите длинну массива M");
-int M = int.Parse(Console.ReadLine());
-int[] array = new int[M];
-EnterArrey(array);
+//Console.WriteLine("Введите длинну массива M");
+//int M = int.Parse(Console.ReadLine());
+//int[] array = new int[M];
+//EnterArrey(array);
+
+Console.WriteLine("Введите числа массива через пробел");
+int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+
 Console.Write("\nВведенный массив - ");
-PrintArray(array);
-int s = FindSumPositiveNambers(array);
+PrintArray(arr);
+int s = FindSumPositiveNambers(arr);
 Console.WriteLine($"Колличество положительных элементов в массиве = {s}");
 
 
-
-
+/*
 void EnterArrey(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
@@ -23,6 +26,7 @@ void EnterArrey(int[] array)
         array[i] = int.Parse(Console.ReadLine());
     }
 }
+*/
 
 void PrintArray(int[] array)
 {
