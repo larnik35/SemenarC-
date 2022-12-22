@@ -27,7 +27,7 @@ void FillArrey (int[] array){
 Random rnd = new Random();
 for (int i = 0; i < array.Length; i++)
 {
-    array[i] = rnd.NextDouble(-1,1);
+    array[i] = rnd.Next(0,1000);
 }
 }
 
