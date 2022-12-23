@@ -4,19 +4,25 @@
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
 
-Console.Clear();
+
 try
 {
-    int m = ReadNamber("ВВедите колличество столбцов массива \"m\" ");
-    int n = ReadNamber("\nВведите колличество строк в массиве \"n\" ");
+    Console.Clear();
+    int m = ReadNamber("Введите колличество столбцов массива \"m\"  - ");
+    int n = ReadNamber("\nВведите колличество строк в массивеv \"n\"  - ");
     double[,] array = new double[m, n];
     Console.WriteLine();
     FillingPrintArray(array);
+    Console.WriteLine("\nДля выхода нажми Ввод");// Делаю чтоб посмотреть результат работы в exe файле
+    string exit = Console.ReadLine();
 }
 catch (Exception ex)
 {
     Console.WriteLine(ex.Message);
+    string exit = Console.ReadLine();
 }
+
+
 
 void FillingPrintArray(double[,] array) // задаем и распечатываем массив с случайными числами
 {
@@ -26,7 +32,15 @@ void FillingPrintArray(double[,] array) // задаем и распечатыв�
         for (int j = 0; j < array.GetLength(1); j++)
         {
             array[i, j] = rnd.NextDouble() * rnd.Next(-9, 10);
-            Console.Write($" {array[i, j]:F1}");
+            if (array[i, j] >= 0)
+            {
+                Console.Write($"  {array[i, j]:F1}"); // вставил лишний пробел если число положительное , 
+                                                      //чтоб выровнить столбцы тк отр один знак больше
+            }
+            else
+            {
+                Console.Write($" {array[i, j]:F1}");
+            }
         }
         Console.WriteLine();
     }
@@ -34,7 +48,7 @@ void FillingPrintArray(double[,] array) // задаем и распечатыв�
 
 int ReadNamber(string input)
 {
-    Console.WriteLine(input);
+    Console.Write(input);
 
     bool isParsed = int.TryParse(Console.ReadLine(), out int number);
 
@@ -42,5 +56,5 @@ int ReadNamber(string input)
     {
         return number;
     }
-    throw new Exception("Нужно вводить цифры");
+    throw new Exception("\nНужно вводить цифры. \n\nДля выхода нажмите ввод");
 }
