@@ -8,8 +8,8 @@
 try
 {
     Console.Clear();
-    int m = ReadNamber("Введите колличество столбцов массива \"m\"  - ");
-    int n = ReadNamber("\nВведите колличество строк в массивеv \"n\"  - ");
+    int m = ReadNamber("Введите колличество строк массива \"m\"  - ");
+    int n = ReadNamber("\nВведите колличество столбцов в массивеv \"n\"  - ");
     double[,] array = new double[m, n];
     Console.WriteLine();
     FillingPrintArray(array);
