@@ -42,11 +42,11 @@ void FillingPrintArray(int[,] array) // задаем и распечатывае
     Random rnd = new Random();
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        Console.Write("     ");
+        Console.Write("          ");
         for (int j = 0; j < array.GetLength(1); j++)
         {
             array[i, j] = rnd.Next(1, 10);
-            Console.Write($"  {array[i, j]}");
+            Console.Write($"   {array[i, j]}");
         }
         Console.WriteLine();
     }
@@ -55,15 +55,15 @@ void FillingPrintArray(int[,] array) // задаем и распечатывае
 void ArithmeticMeanArray(int[,] array) // принемаем заданный массив находим сумму  каждого столбца и распечатываем ее
 {
 
-    int sum = 0;
-    Console.Write("Сумма");
+    double sum = 0;
+    Console.Write("Ср. арифм.");
     for (int j = 0; j < array.GetLength(1); j++)
     {
         for (int i = 0; i < array.GetLength(0); i++)
         {
             sum = sum + array[i, j];
         }
-        Console.Write($" {sum}");
+        Console.Write($" {sum/array.GetLength(1):F1}");
         sum = 0;
     }
     Console.WriteLine();
