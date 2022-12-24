@@ -57,9 +57,9 @@ void ArithmeticMeanArray(int[,] array) // принемаем заданный м
 
     int sum = 0;
     Console.Write("Сумма");
-    for (int j = 0; j < array.GetLength(0); j++)
+    for (int j = 0; j < array.GetLength(1); j++)
     {
-        for (int i = 0; i < array.GetLength(1); i++)
+        for (int i = 0; i < array.GetLength(0); i++)
         {
             sum = sum + array[i, j];
         }
