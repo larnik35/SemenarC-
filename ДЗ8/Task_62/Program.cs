@@ -17,9 +17,7 @@ try
     int h = 1;
     Console.WriteLine();
 
-    Console.WriteLine("Сформированный нулевой массив");
-    FillingNulArray(array);
-    PrintArray(array);
+    
 
     Console.WriteLine("\nСформированный спиральный  массив");
     FillingSpiralArray(array, m, n);
@@ -49,18 +47,6 @@ int ReadNamber(string input) // Проверяем правильность вв
         return number;
     }
     throw new Exception("\nНужно вводить цифры. \n\nДля выхода нажмите ввод");
-}
-
-void FillingNulArray(int[,] array) // задаем и заполняем его 0
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            array[i, j] = 0;
-        }
-    }
-
 }
 
 void FillingSpiralArray(int[,] array, int m, int n)
