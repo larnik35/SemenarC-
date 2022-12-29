@@ -4,7 +4,10 @@
 // 34(1,0,0) 41(1,1,0)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
+
+
 Console.Clear();
+
 int[,,] array3D = new int[2, 2, 2];
 int[] arraykey = new int[90];
 
@@ -15,7 +18,7 @@ Console.WriteLine("\nОставшиеся цифры");
 PrintgKey(arraykey);
 
 
-void CreatingKey(int[] arraykey) // создаем базу данных двузначных не повторяющихся чисел привязанных к индификатору (Номер ячейки массива)
+void CreatingKey(int[] arraykey) // создаем базу данных двузначных, не повторяющихся чисел привязанных к индификатору (Номер ячейки массива)
 {
     for (int i = 0; i < arraykey.Length; i++)
     {

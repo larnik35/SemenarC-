@@ -58,7 +58,7 @@ void FillingPrintArray(int[,] array) // задаем и распечатывае
     }
 }
 
-void FindingSumRowsArray(int[,] array, int[] stringarray)
+void FindingSumRowsArray(int[,] array, int[] stringarray) // Формируем массив из сумм строк расчетного массива 
 {
     int sum = 0;
     for (int i = 0; i < array.GetLength(0); i++)
