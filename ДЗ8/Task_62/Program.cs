@@ -12,9 +12,7 @@ try
     int m = ReadNamber("Введите колличество строк массива \"m\"  - ");
     int n = ReadNamber("\nВведите колличество столбцов в массивеv \"n\"  - ");
     int[,] array = new int[m, n];
-    int j = 0;
-    int i = 0;
-    int h = 1;
+    
     Console.WriteLine();
 
 
