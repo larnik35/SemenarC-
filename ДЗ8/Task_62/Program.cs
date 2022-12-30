@@ -17,7 +17,7 @@ try
     int h = 1;
     Console.WriteLine();
 
-    
+
 
     Console.WriteLine("\nСформированный спиральный  массив");
     FillingSpiralArray(array, m, n);
