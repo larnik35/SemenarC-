@@ -8,21 +8,21 @@ Console.Write("Введите значение M  ");
 int m = int.Parse(Console.ReadLine());
 Console.Write("Введите значение N  ");
 int n = int.Parse(Console.ReadLine());
-long f = 0;
-if (m < 1 | n < 0) // Проверка на положительные вводимые значения
+if (m < 0 | n < 0)// Проверка на положительные вводимые значения
 {
     Console.WriteLine("Функция Аккермана принимает только положительные значения");
 }
 else
 {
-    Console.WriteLine($"\nФункция Аккермана для чисел {m} до {n}  = " + OutputFunctionAckerman(m, n));
+Console.WriteLine($"\nФункция Аккермана для чисел {m} до {n}  = " + OutputFunctionAckerman(m, n));
 }
 
 
 
 long OutputFunctionAckerman(long m, long n) // Вычисляем функцию Аккермана
 {
-    
+    long f = 0;
+
     if (m == 0)
     {
         f = n + 1;
@@ -35,6 +35,7 @@ long OutputFunctionAckerman(long m, long n) // Вычисляем функцию
     {
         f = OutputFunctionAckerman(m - 1, OutputFunctionAckerman(m, n - 1));
     }
+    
     return f;
 }
 
